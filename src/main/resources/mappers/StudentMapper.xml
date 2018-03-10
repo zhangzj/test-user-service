@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzj.dao.StudentMapper">
+    <!-- 映射到对应的mapper接口 -->
+    <resultMap id="StudentResult" type="Student">
+        <id property="studId" column="stud_id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select id="findAllStudents" resultMap="StudentResult">
+        SELECT * FROM STUDENTS
+    </select>
+    <select id="findStudentById" parameterType="int" resultType="Student">
+        SELECT stud_id AS studid, NAME FROM students where stud_id=#{id}
+    </select>
+    <insert id="insertStudent" parameterType="Student">
+        insert into students(name) VALUEs (#{name})
+    </insert>
+</mapper>
