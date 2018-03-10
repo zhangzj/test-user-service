@@ -10,19 +10,20 @@
         <package name="com.zzj.model"/>
         <!--<typeAlias type="Student" alias="com.zzj.model.Student" />-->
     </typeAliases>
-    <environments default="dev">
-        <environment id="dev">
-            <transactionManager type="JDBC"></transactionManager>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:33060/test"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123456"/>
-            </dataSource>
-        </environment>
-    </environments>
+    <!--<environments default="dev">-->
+        <!--<environment id="dev">-->
+            <!--<transactionManager type="JDBC"></transactionManager>-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="com.mysql.jdbc.Driver" />-->
+                <!--<property name="url" value="jdbc:mysql://localhost:33060/test"/>-->
+                <!--<property name="username" value="root"/>-->
+                <!--<property name="password" value="123456"/>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
     <mappers>
         <!--<mapper resource="mappers/UserMapper.xml"/>-->
+        <mapper resource="mappers/DeviceUserMapper.xml"/>
         <mapper resource="mappers/StudentMapper.xml"/>
     </mappers>
 </configuration>
