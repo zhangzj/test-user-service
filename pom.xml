@@ -99,6 +99,11 @@
                     <overwrite>true</overwrite>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.13.v20150730</version>
+            </plugin>
         </plugins>
 
     </build>
